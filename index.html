@@ -1,0 +1,197 @@
+<html style="margin:0;padding:0;">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+(function(){
+  var s = document.createElement('style');
+  s.textContent = ':root{--bg:#fdf9fb;--card:#ffffff;--text:#0f172a;--muted:#64748b;--accent:#bd3193;--accent-soft:rgba(189,49,147,.14);--accent2:#0891b2;--accent2-soft:rgba(8,145,178,.14);--border:rgba(15,23,42,.07)}.reveal{opacity:0;transform:translateY(20px);animation:fadeUp .6s ease forwards}.reveal:nth-child(2){animation-delay:.1s}.reveal:nth-child(3){animation-delay:.2s}.reveal:nth-child(4){animation-delay:.3s}@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}.tab-btn{transition:all .2s ease}.tab-btn.active{background:var(--accent-soft);color:var(--text);border:1px solid var(--accent)}.chip{transition:all .15s ease;cursor:pointer}.chip.active{background:var(--accent);color:#fff;border-color:var(--accent)}.opt-btn{transition:all .15s ease;cursor:pointer}.opt-btn.active{background:var(--accent-soft);border:1px solid var(--accent);color:var(--text)}.gen-btn{transition:all .2s ease}.gen-btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 8px 25px rgba(189,49,147,.3)}.gen-btn:disabled{opacity:.6;cursor:not-allowed}.progress-bar{transition:width .3s ease}.shimmer{background:linear-gradient(90deg,var(--accent-soft),var(--accent2-soft),var(--accent-soft));background-size:200% 100%;animation:shimmer 2s infinite}@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}.float-anim{animation:floatY 3s ease-in-out infinite}@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}.pulse-ring{animation:pulseRing 2s infinite}@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(189,49,147,.4)}70%{box-shadow:0 0 0 15px rgba(189,49,147,0)}100%{box-shadow:0 0 0 0 rgba(189,49,147,0)}}.gradient-text{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}.video-sim{position:relative;overflow:hidden;border-radius:16px}.video-sim::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,#bd3193,#0891b2,#7c3aed,#bd3193);background-size:300% 300%;animation:gradientShift 4s ease infinite}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.scan-line{position:absolute;left:0;right:0;height:2px;background:rgba(255,255,255,.6);animation:scanMove 2s linear infinite}@keyframes scanMove{0%{top:0}100%{top:100%}}';
+  document.head.appendChild(s);
+})();
+</script>
+<div style="background-color:transparent;box-sizing:border-box;">
+  <div style="color:var(--text);font-family:'Urbanist',sans-serif;background:radial-gradient(1000px 500px at 85% -5%, var(--accent-soft), transparent 60%), radial-gradient(800px 400px at 10% 10%, var(--accent2-soft), transparent 55%), var(--bg);">
+    <div class="max-w-6xl mx-auto px-5 py-10">
+
+      <!-- Header -->
+      <div class="reveal flex items-center justify-between mb-10">
+        <div class="flex items-center gap-3">
+          <div style="width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;" class="pulse-ring">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <div>
+            <div style="font-weight:800;font-size:20px;letter-spacing:-0.02em;">FreeDance <span class="gradient-text">AI</span></div>
+            <div style="font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;">Free Video Generator</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <span style="padding:4px 12px;border-radius:20px;background:var(--accent-soft);border:1px solid var(--accent);font-size:12px;font-weight:600;color:var(--text);">100% Free</span>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="reveal text-center mb-10">
+        <h1 style="font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.15;letter-spacing:-0.02em;margin-bottom:12px;">
+          สร้างวิดีโอ <span class="gradient-text">AI คุณภาพสูง</span><br>ฟรี ไม่จำกัด
+        </h1>
+        <p style="color:var(--muted);font-size:16px;max-width:520px;margin:0 auto;line-height:1.6;">
+          พิมพ์คำอธิบาย หรืออัปโหลดรูปภาพ แล้วให้ AI สร้างวิดีโอสวยๆ ให้คุณภายในไม่กี่วินาที
+        </p>
+      </div>
+
+      <!-- Main App -->
+      <div class="reveal flex flex-wrap gap-5 mb-12" style="align-items:stretch;">
+
+        <!-- Left: Controls -->
+        <div style="flex:1 1 340px;min-width:300px;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.04);">
+
+          <!-- Tabs -->
+          <div style="display:flex;gap:8px;margin-bottom:20px;background:rgba(128,128,128,.06);padding:5px;border-radius:12px;">
+            <button id="tabText" class="tab-btn active" style="flex:1;padding:10px;border-radius:9px;font-weight:600;font-size:14px;background:transparent;border:1px solid transparent;color:var(--muted);">
+              <span style="display:flex;align-items:center;justify-content:center;gap:6px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+                Text to Video
+              </span>
+            </button>
+            <button id="tabImage" class="tab-btn" style="flex:1;padding:10px;border-radius:9px;font-weight:600;font-size:14px;background:transparent;border:1px solid transparent;color:var(--muted);">
+              <span style="display:flex;align-items:center;justify-content:center;gap:6px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                Image to Video
+              </span>
+            </button>
+          </div>
+
+          <!-- Image Upload (hidden by default) -->
+          <div id="uploadArea" style="display:none;margin-bottom:16px;border:2px dashed var(--border);border-radius:14px;padding:24px;text-align:center;cursor:pointer;transition:all .2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.background='var(--accent-soft)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='transparent'">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="1.8" style="margin:0 auto 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <div style="font-size:14px;font-weight:600;color:var(--text);">คลิกเพื่ออัปโหลดรูปภาพ</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:4px;">PNG, JPG (สูงสุด 10MB)</div>
+          </div>
+
+          <!-- Prompt -->
+          <label style="display:block;font-size:13px;font-weight:600;margin-bottom:8px;color:var(--text);">คำอธิบายวิดีโอ (Prompt)</label>
+          <textarea id="promptInput" rows="4" placeholder="เช่น ฮีโร่สวมชุดแดงยืนในเมืองที่กำลังถูกทำลาย มีพลังงานแสงไฟล้อมรอบตัว กล้องหมุนช้าๆ สไตล์หนังบล็อกบัสเตอร์..." style="width:100%;padding:14px;border-radius:12px;border:1px solid var(--border);background:rgba(128,128,128,.03);font-size:14px;font-family:inherit;resize:vertical;line-height:1.5;box-sizing:border-box;color:var(--text);" onfocus="this.style.borderColor='var(--accent)';this.style.outline='none'" onblur="this.style.borderColor='var(--border)'"></textarea>
+
+          <!-- Example prompts -->
+          <div style="margin:10px 0 18px;">
+            <div style="font-size:11px;color:var(--muted);margin-bottom:6px;font-weight:500;">ตัวอย่างที่นิยม:</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <button class="chip example-chip" data-prompt="แมวส้มสวมชุดนักบินอวกาศลอยอยู่ในอวกาศ มีดาวเคราะห์อยู่เบื้องหลัง แสงแดดส่องถึง" style="padding:5px 12px;border-radius:16px;font-size:12px;background:var(--card);border:1px solid var(--border);color:var(--muted);">แมวอวกาศ</button>
+              <button class="chip example-chip" data-prompt="เมืองไซเบอร์พังก์ยามค่ำคืน แสงไฟนีออนสีฟ้าและชมพู ฝนตก คนเดินผ่านไปมา มุมมองถนน" style="padding:5px 12px;border-radius:16px;font-size:12px;background:var(--card);border:1px solid var(--border);color:var(--muted);">ไซเบอร์พังก์</button>
+              <button class="chip example-chip" data-prompt="น้ำตกในป่าฝนยามเช้า มีหมอกลอยอยู่เหนือน้ำ แสงอาทิตย์ส่องผ่านใบไม้ สัตว์ป่ากำลังดื่มน้ำ" style="padding:5px 12px;border-radius:16px;font-size:12px;background:var(--card);border:1px solid var(--border);color:var(--muted);">ธรรมชาติ</button>
+            </div>
+          </div>
+
+          <!-- Duration -->
+          <label style="display:block;font-size:13px;font-weight:600;margin-bottom:8px;color:var(--text);">ความยาววิดีโอ</label>
+          <div style="display:flex;gap:8px;margin-bottom:16px;">
+            <button class="opt-btn dur-btn" data-val="5" style="flex:1;padding:10px;border-radius:10px;background:var(--card);border:1px solid var(--border);font-size:13px;font-weight:600;color:var(--muted);">5 วินาที</button>
+            <button class="opt-btn dur-btn active" data-val="10" style="flex:1;padding:10px;border-radius:10px;background:var(--card);border:1px solid var(--border);font-size:13px;font-weight:600;color:var(--muted);">10 วินาที</button>
+            <button class="opt-btn dur-btn" data-val="15" style="flex:1;padding:10px;border-radius:10px;background:var(--card);border:1px solid var(--border);font-size:13px;font-weight:600;color:var(--muted);">15 วินาที</button>
+          </div>
+
+          <!-- Ratio -->
+          <label style="display:block;font-size:13px;font-weight:600;margin-bottom:8px;color:var(--text);">อัตราส่วนภาพ</label>
+          <div style="display:flex;gap:8px;margin-bottom:16px;">
+            <button class="opt-btn ratio-btn active" data-val="16:9" style="flex:1;padding:10px;border-radius:10px;background:var(--card);border:1px solid var(--border);font-size:13px;font-weight:600;color:var(--muted);">16:9</button>
+            <button class="opt-btn ratio-btn" data-val="9:16" style="flex:1;padding:10px;border-radius:10px;background:var(--card);border:1px solid var(--border);font-size:13px;font-weight:600;color:var(--muted);">9:16</button>
+            <button class="opt-btn ratio-btn" data-val="1:1" style="flex:1;padding:10px;border-radius:10px;background:var(--card);border:1px solid var(--border);font-size:13px;font-weight:600;color:var(--muted);">1:1</button>
+          </div>
+
+          <!-- Style -->
+          <label style="display:block;font-size:13px;font-weight:600;margin-bottom:8px;color:var(--text);">สไตล์ภาพ</label>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;">
+            <button class="chip style-chip active" data-style="Cinematic" style="padding:7px 14px;border-radius:18px;font-size:12px;font-weight:600;background:var(--card);border:1px solid var(--border);color:var(--muted);">ภาพยนตร์</button>
+            <button class="chip style-chip" data-style="Anime" style="padding:7px 14px;border-radius:18px;font-size:12px;font-weight:600;background:var(--card);border:1px solid var(--border);color:var(--muted);">อนิเมะ</button>
+            <button class="chip style-chip" data-style="Realistic" style="padding:7px 14px;border-radius:18px;font-size:12px;font-weight:600;background:var(--card);border:1px solid var(--border);color:var(--muted);">สมจริง</button>
+            <button class="chip style-chip" data-style="Cyberpunk" style="padding:7px 14px;border-radius:18px;font-size:12px;font-weight:600;background:var(--card);border:1px solid var(--border);color:var(--muted);">ไซเบอร์</button>
+            <button class="chip style-chip" data-style="3D Render" style="padding:7px 14px;border-radius:18px;font-size:12px;font-weight:600;background:var(--card);border:1px solid var(--border);color:var(--muted);">3D</button>
+            <button class="chip style-chip" data-style="Watercolor" style="padding:7px 14px;border-radius:18px;font-size:12px;font-weight:600;background:var(--card);border:1px solid var(--border);color:var(--muted);">สีน้ำ</button>
+          </div>
+
+          <!-- Generate Button -->
+          <button id="generateBtn" class="gen-btn" style="width:100%;padding:16px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-size:16px;font-weight:700;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span id="genBtnText">สร้างวิดีโอเลย</span>
+          </button>
+          <div style="text-align:center;font-size:11px;color:var(--muted);margin-top:8px;">ใช้เครดิตฟรี 0 เครดิต · สร้างได้ไม่จำกัด</div>
+        </div>
+
+        <!-- Right: Preview / Result -->
+        <div style="flex:1 1 340px;min-width:300px;display:flex;flex-direction:column;gap:16px;">
+
+          <!-- Preview Box -->
+          <div id="previewBox" style="flex:1;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.04);display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:380px;position:relative;overflow:hidden;">
+
+            <!-- Idle State -->
+            <div id="idleState" style="text-align:center;">
+              <div class="float-anim" style="width:80px;height:80px;border-radius:24px;background:linear-gradient(135deg,var(--accent-soft),var(--accent2-soft));display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8l-6 4 6 4V8z"/></svg>
+              </div>
+              <div style="font-size:16px;font-weight:700;margin-bottom:6px;">พร้อมสร้างวิดีโอของคุณ</div>
+              <div style="font-size:13px;color:var(--muted);max-width:260px;line-height:1.5;">กรอกคำอธิบาย แล้วกดปุ่มสร้างวิดีโอ AI จะทำงานให้ทันที</div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loadingState" style="display:none;width:100%;text-align:center;">
+              <div class="video-sim" style="width:100%;height:200px;margin-bottom:16px;display:flex;align-items:center;justify-content:center;">
+                <div class="scan-line"></div>
+                <div style="position:relative;z-index:2;color:#fff;font-weight:700;font-size:15px;text-shadow:0 2px 8px rgba(0,0,0,.3);">
+                  <span id="stageText">กำลังวิเคราะห์ prompt...</span>
+                </div>
+              </div>
+              <div style="width:100%;height:8px;background:rgba(128,128,128,.1);border-radius:4px;overflow:hidden;margin-bottom:10px;">
+                <div id="progressFill" class="progress-bar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:4px;"></div>
+              </div>
+              <div id="progressPct" style="font-size:13px;font-weight:600;color:var(--accent);">0%</div>
+            </div>
+
+            <!-- Result State -->
+            <div id="resultState" style="display:none;width:100%;">
+              <div class="video-sim" style="width:100%;height:220px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;cursor:pointer;">
+                <div style="position:relative;z-index:2;width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--accent)"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+                </div>
+                <div style="position:absolute;bottom:10px;right:12px;z-index:2;background:rgba(0,0,0,.6);color:#fff;padding:3px 10px;border-radius:6px;font-size:12px;font-weight:600;" id="resultDuration">0:10</div>
+              </div>
+              <div style="font-size:14px;font-weight:700;margin-bottom:4px;" id="resultTitle">วิดีโอของคุณพร้อมแล้ว</div>
+              <div style="font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.5;" id="resultPrompt"></div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                <button style="flex:1;min-width:120px;padding:10px;border-radius:10px;background:var(--accent-soft);border:1px solid var(--accent);color:var(--text);font-size:13px;font-weight:600;cursor:pointer;" onclick="alert('ดาวน์โหลดเริ่มต้นแล้ว! (ตัวอย่าง Demo)')">
+                  <span style="display:flex;align-items:center;justify-content:center;gap:6px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    ดาวน์โหลด
+                  </span>
+                </button>
+                <button id="newGenBtn" style="flex:1;min-width:120px;padding:10px;border-radius:10px;background:var(--card);border:1px solid var(--border);color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;">
+                  สร้างใหม่
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info Card -->
+          <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:36px;height:36px;border-radius:10px;background:var(--accent2-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            </div>
+            <div>
+              <div style="font-size:13px;font-weight:700;margin-bottom:3px;">เวอร์ชัน Demo UI</div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.5;">นี่คืออินเทอร์เฟซตัวอย่าง หากต้องการเชื่อมต่อ AI จริง สามารถนำโค้ดนี้ไปต่อ API ของ Seedance / Dola ได้เลย</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="reveal mb-12">
+        <h2 style="font-size:24px;font-weight:800;text-align:center;margin-bottom:8px;">ทำไมต้อง <span class="gradient-text">FreeDance AI</span></h2>
+        <p style="text-align:center;color:var(--muted);font-size:14px;margin-bottom:24px;">คุณสมบัติครบครัน เหมือนใช้เครื่องมือระดับโปร</p>
+        <div class="flex flex-wrap gap-4">
+          <div style="flex:1 1 200px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.03);">
+            <div style="width:40px;height:40px;border-radius:12px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:12px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div style="font-size:15px;font-weight:700;margin-bottom:6px;">รวดเร็วทันใจ</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.5;">สร้างวิดีโอได้ภายใน 30 วินาที ไม่ต้องรอคิวนาน</div>
+          </div>
+          <d
